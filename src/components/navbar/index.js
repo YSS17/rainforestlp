@@ -1,14 +1,13 @@
 import React from 'react';
-import {FaBars} from 'react-icons/fa'
-import { Nav, NavbarContainer, Navbarlogo,
-         MobileIcon, NavMenu, NavItem, NavLinks } from './navbar'
+import { FaBars } from 'react-icons/fa';
+import { Nav, NavbarContainer, Navbarlogo, MobileIcon, NavMenu, NavItem, NavLinks } from './navbar';
 
 const Navbar = () => {
   return (
     <>
       <Nav>
         <NavbarContainer>
-          <Navbarlogo to="/">🌱 Rainforest</Navbarlogo>
+          <Navbarlogo to="/">Rainforest</Navbarlogo>
           <MobileIcon>
             <FaBars />
           </MobileIcon>
@@ -23,4 +22,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+export default Navbar;

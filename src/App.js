@@ -1,5 +1,5 @@
 import './App.css';
-import Navbar from './components/navbar/index';
+import Navbar from './components/navbar';
 import { BrowserRouter as Router } from 'react-router-dom';
 
 function App() {
