@@ -36,7 +36,7 @@ const HeroSection = () => {
             .pauseFor(800)
             .deleteAll()
             .pauseFor(500)
-            .typeString('<span style="color: #01bf71;">Nutrimatilha</span>')
+            .typeString('<span style="color: #01bf71;">Rainforest</span>')
             .start()
           }}
           />
