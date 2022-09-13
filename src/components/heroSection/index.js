@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Video from '../../videos/video.mp4';
 import Typewriter from 'typewriter-effect';
+import { PopupButton } from '@typeform/embed-react';
 import { Button } from '../buttonElement';
 import { HeroContainer, HeroBg, VideoBg,
          HeroContent, HeroH1, HeroP,
@@ -14,13 +15,17 @@ const HeroSection = () => {
     setHover(!hover)
   }
 
+  const openInNewTab = url => {
+    window.open('https://viplink.typeform.com/to/yJ3FQ6pL?typeform-source=www.google.com', '_blank', 'noopener,noreferrer');
+  };
+
   return (
     <HeroContainer>
       <HeroBg>
         <VideoBg autoPlay loop muted src={Video} type='video/mp4'/>
       </HeroBg>
       <HeroContent>
-        <HeroH1>        
+        <HeroH1>
           <Typewriter onInit={(typewriter) => {
             typewriter
             .pauseFor(500)
@@ -43,7 +48,8 @@ const HeroSection = () => {
         </HeroH1>
         <HeroP>Get access to our plans</HeroP>
         <HeroBtnWrapper>
-          <Button to="signup" onMouseEnter={onHover} onMouseLeave={onHover}>Get Started {hover ? <ArrowForward/> : <ArrowRight/>}</Button>
+
+          <Button to="signup" onMouseEnter={onHover} onClick={openInNewTab} onMouseLeave={onHover}>Get Started {hover ? <ArrowForward/> : <ArrowRight/>}</Button>
         </HeroBtnWrapper>
       </HeroContent>
     </HeroContainer>
